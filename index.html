@@ -1,9 +1,751 @@
 
-<!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Android developer — Kotlin, Jetpack Compose, integrations and consulting"><title>Tulya — Android Developer</title><style>
-:root{--bg:#101019;--panel:#0c0b15;--fg:#f7f6fb;--muted:#96919f;--pink:#ed477b;--purple:#6554ff}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#a99bc9;color:var(--fg);font-family:Inter,system-ui,-apple-system,'Segoe UI',sans-serif}button,a{font:inherit}a{text-decoration:none;color:inherit}.site{max-width:1200px;margin:55px auto;background:var(--bg);min-height:90vh;box-shadow:0 25px 90px #21162b40}header{height:70px;border-bottom:1px solid #252330;display:flex;align-items:center;justify-content:space-between;padding:0 8.5%}.logo{font-family:Georgia,serif;font-weight:bold;font-size:23px}.logo span,.gradient-text{background:linear-gradient(90deg,#f34d79,#6756ff);background-clip:text;color:transparent}nav{display:flex;gap:26px;align-items:center}nav a{font-size:12px}nav a:hover{color:#f34d79}.langs{display:flex;gap:3px;margin-left:12px}.langs button{border:1px solid #383245;background:none;color:#bcb6c6;border-radius:5px;padding:5px 8px;cursor:pointer;font-size:11px}.langs button.active{background:linear-gradient(120deg,#e84a83,#6555ff);color:white;border-color:transparent}.wrap{max-width:950px;margin:auto}.hero{min-height:475px;display:grid;grid-template-columns:1fr 1fr;gap:45px;align-items:center;padding:40px 0 30px}.intro{font-size:12px;font-weight:700}.pill{background:#282533;padding:5px 10px;border-radius:4px;color:#c7c3d0;margin-left:5px;font-weight:400}.hero h1{font-size:clamp(28px,3vw,42px);line-height:1.52;letter-spacing:-.8px;margin:17px 0}.hero p{font-size:13px;color:var(--muted);line-height:1.8;max-width:400px}.buttons{display:flex;gap:12px;margin-top:30px}.btn{border:1px solid #5c43b8;border-radius:5px;padding:12px 18px;font-size:12px;cursor:pointer;background:transparent;color:#e7d5ff}.btn.primary{background:linear-gradient(110deg,#e54c7b,#6554ff);border:0;color:white}.hero-art{height:360px;position:relative;display:flex;align-items:center;justify-content:center}.blob{position:absolute;width:300px;height:285px;background:linear-gradient(140deg,#d44b99,#6554ff);border-radius:49% 51% 42% 58% / 42% 44% 56% 58%;transform:rotate(-14deg);box-shadow:22px 20px 0 #21152a}.portrait{position:relative;width:230px;height:265px;display:grid;place-items:center;filter:drop-shadow(0 12px 20px #21132988)}.portrait svg{width:220px;height:240px}.social{position:absolute;bottom:8px;display:flex;gap:12px}.social a{width:37px;height:37px;border-radius:50%;background:white;color:#7654db;display:grid;place-items:center;font-size:16px;font-weight:800;border:3px solid #ecdfef}.floating{position:absolute;right:0;top:65px;background:#fff;color:#222;border-radius:42% 58% 50% 50%;padding:18px 14px;text-align:center;font-size:11px}.floating b{display:block;font-size:17px}.services{padding:8px 0 75px}.heading{font-size:25px;margin:0 0 12px}.heading:before{content:'▧';color:#ad65f2;margin-right:11px}.section-description{font-size:13px;color:var(--muted);line-height:1.8;max-width:650px;margin-bottom:55px}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:42px 20px}.card{position:relative;background:var(--panel);border-radius:10px;padding:47px 17px 22px;text-align:center;min-height:205px;display:flex;flex-direction:column;align-items:center}.card.featured{background:linear-gradient(135deg,#e54b83,#6653ff)}.card .symbol{position:absolute;top:-28px;width:66px;height:66px;border-radius:9px;background:linear-gradient(140deg,#e34d87,#6456ff);display:grid;place-items:center;font-size:28px;box-shadow:0 10px 25px #0002}.card.featured .symbol{background:#fff;color:#a34dd9}.card h3{font-size:17px;margin:0 0 10px}.card p{font-size:11px;line-height:1.6;color:#a49dab;margin:0 0 16px;flex:1}.card.featured p{color:#f5e4f7}.more{background:none;border:0;color:white;text-decoration:underline;cursor:pointer;font-size:12px;padding:4px}.more:after{content:' →';color:#db67cf}.details{display:none;font-size:12px;line-height:1.7;margin:13px 0 0;color:#e8e0f0}.card.open .details{display:block}.bottom{border-top:1px solid #272231;background:#15131f;padding:30px max(8.5%,calc((100% - 950px)/2));display:flex;align-items:center;justify-content:space-between;gap:20px}.bottom h2{font-size:21px;margin:0 0 5px}.bottom p{font-size:12px;color:#aaa3b5;margin:0}.bottom a{white-space:nowrap}footer{text-align:center;color:#7e778b;padding:20px;font-size:11px}@media(max-width:1100px){.site{margin:20px}.wrap{margin:0 7%}}@media(max-width:760px){body{background:var(--bg)}.site{margin:0}.hero{grid-template-columns:1fr;padding-top:55px;gap:0}.hero-art{height:280px}.blob{width:245px;height:230px}.portrait svg{width:180px;height:190px}.floating{right:15%;top:30px}.cards{grid-template-columns:repeat(2,1fr)}nav{gap:12px}nav a{display:none}nav a:last-of-type{display:inline}.bottom{padding:28px 7%}}@media(max-width:480px){.cards{grid-template-columns:1fr;gap:44px}.hero h1{font-size:31px}.bottom{flex-direction:column;align-items:flex-start}.floating{right:0}}
-</style></head><body><div class="site"><header><a href="#home" class="logo"><span>Tulya</span>Dev</a><nav><a href="#home" data-i18n="home">Home</a><a href="#services" data-i18n="servicesNav">Services</a><a href="#contact" data-i18n="contactNav">Contact</a><div class="langs"><button type="button" data-lang="en">EN</button><button type="button" data-lang="ru">RU</button></div></nav></header><main class="wrap"><section class="hero" id="home"><div><div class="intro"><span data-i18n="iam">I AM</span><span class="pill" data-i18n="role">Android Developer</span></div><h1><span data-i18n="headline1">Android Apps.</span><br><span class="gradient-text" data-i18n="headline2">Clean Architecture.</span><br><span data-i18n="headline3">Reliable Solutions.</span></h1><p data-i18n="heroDesc">I help businesses improve Android applications: new features, complex bugs, API integrations and maintainable Kotlin code.</p><div class="buttons"><a class="btn primary" href="#contact" data-i18n="touch">Get in Touch →</a><a class="btn" href="https://github.com/tulya54" target="_blank" rel="noopener">GitHub ↗</a></div></div><div class="hero-art"><div class="blob"></div><div class="portrait"><svg viewBox="0 0 220 240" role="img" aria-label="Illustration of a mobile application"><rect x="55" y="8" width="110" height="216" rx="21" fill="#171322" stroke="#f6dfff" stroke-width="5"/><rect x="66" y="26" width="88" height="179" rx="8" fill="#211b37"/><rect x="92" y="16" width="36" height="5" rx="3" fill="#bba2e5"/><circle cx="110" cy="71" r="24" fill="#d851a3"/><path d="M99 70l8 8 17-20" stroke="white" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/><rect x="78" y="111" width="64" height="8" rx="4" fill="#eee7fa"/><rect x="78" y="128" width="53" height="6" rx="3" fill="#6c5ba0"/><rect x="78" y="145" width="64" height="6" rx="3" fill="#6c5ba0"/><rect x="78" y="172" width="64" height="19" rx="6" fill="#a34deb"/></svg></div><div class="floating"><b>Kotlin</b>Compose</div><div class="social"><a href="https://github.com/tulya54" target="_blank" rel="noopener" aria-label="GitHub">GH</a><a href="#contact" aria-label="Contact">✉</a></div></div></section><section class="services" id="services"><h2 class="heading" data-i18n="servicesTitle">My Services</h2><p class="section-description" data-i18n="servicesDesc">Practical Android development services. Clear scope, technical assessment and results you can integrate into your product.</p><div class="cards" id="cards"></div></section></main><section class="bottom" id="contact"><div><h2 data-i18n="contactTitle">Have an Android task?</h2><p data-i18n="contactDesc">Tell me what needs to be built or fixed. Let's discuss the scope.</p></div><a class="btn primary" href="https://github.com/tulya54" target="_blank" rel="noopener" data-i18n="contactButton">Contact via GitHub ↗</a></section><footer>© <span id="year"></span> TulyaDev · GitHub Pages</footer></div><script>
-const content={en:{home:'Home',servicesNav:'Services',contactNav:'Contact',iam:'I AM',role:'Android Developer',headline1:'Android Apps.',headline2:'Clean Architecture.',headline3:'Reliable Solutions.',heroDesc:'I help businesses improve Android applications: new features, complex bugs, API integrations and maintainable Kotlin code.',touch:'Get in Touch →',servicesTitle:'My Services',servicesDesc:'Practical Android development services. Clear scope, technical assessment and results you can integrate into your product.',contactTitle:'Have an Android task?',contactDesc:"Tell me what needs to be built or fixed. Let's discuss the scope.",contactButton:'Contact via GitHub ↗',learn:'Learn More',less:'Show Less',items:[['⌘','Android Features','New screens and functionality with Kotlin and Jetpack Compose.','UI implementation, state management, navigation and integration with existing application layers.'],['⚒','Bug Fixing','Crashes, ANRs, lifecycle and navigation issues.','Reproduce the issue, identify the root cause, implement a fix and verify the affected scenario.'],['⇄','API & SDK Integration','REST APIs, push notifications and third-party SDKs.','Retrofit, OkHttp, asynchronous data flows and Android platform integrations.'],['◇','Architecture & Refactoring','Improve complex codebases and reduce technical debt.','Clean Architecture, MVI, modularization, ViewModel and state management improvements.'],['▣','Gradle & Build Setup','Build variants, product flavors and dependency issues.','Configure Gradle, troubleshoot build failures and maintain release configurations.'],['♧','Android Security','Biometrics, integrity checks and security-focused UI.','Implement supported Android security mechanisms and review client-side integration risks.']]},ru:{home:'Главная',servicesNav:'Услуги',contactNav:'Контакты',iam:'Я',role:'Android-разработчик',headline1:'Android-приложения.',headline2:'Чистая архитектура.',headline3:'Надёжные решения.',heroDesc:'Помогаю улучшать Android-приложения: новые функции, сложные ошибки, интеграции API и поддерживаемый код на Kotlin.',touch:'Связаться →',servicesTitle:'Мои услуги',servicesDesc:'Конкретные задачи Android-разработки: понятный объём работ, техническая оценка и результат, готовый к интеграции.',contactTitle:'Есть задача по Android?',contactDesc:'Расскажите, что нужно разработать или исправить. Обсудим объём работ.',contactButton:'Связаться через GitHub ↗',learn:'Подробнее',less:'Свернуть',items:[['⌘','Разработка функций','Новые экраны и функциональность на Kotlin и Jetpack Compose.','Реализация UI, управление состояниями, навигация и интеграция в существующие слои приложения.'],['⚒','Исправление ошибок','Краши, ANR, проблемы жизненного цикла и навигации.','Воспроизведение ошибки, поиск причины, исправление и проверка проблемного сценария.'],['⇄','Интеграция API и SDK','REST API, push-уведомления и сторонние SDK.','Retrofit, OkHttp, асинхронные потоки данных и интеграции с Android API.'],['◇','Архитектура и рефакторинг','Улучшение сложного кода и снижение технического долга.','Clean Architecture, MVI, модульность, ViewModel и управление состояниями.'],['▣','Gradle и сборки','Варианты сборки, product flavors и проблемы зависимостей.','Настройка Gradle, устранение ошибок сборки и поддержка конфигураций релиза.'],['♧','Безопасность Android','Биометрия, проверки целостности и защита интерфейса.','Внедрение механизмов безопасности Android и анализ рисков клиентских интеграций.']]}};
-function setLanguage(lang){const c=content[lang];document.documentElement.lang=lang;document.querySelectorAll('[data-i18n]').forEach(el=>{el.textContent=c[el.dataset.i18n]});document.querySelectorAll('[data-lang]').forEach(b=>b.classList.toggle('active',b.dataset.lang===lang));document.getElementById('cards').innerHTML=c.items.map((item,i)=>`<article class="card ${i===0?'featured':''}"><div class="symbol" aria-hidden="true">${item[0]}</div><h3>${item[1]}</h3><p>${item[2]}</p><button type="button" class="more" aria-expanded="false">${c.learn}</button><div class="details">${item[3]}</div></article>`).join('');document.querySelectorAll('.more').forEach(btn=>btn.addEventListener('click',()=>{const card=btn.closest('.card');const open=card.classList.toggle('open');btn.textContent=open?c.less:c.learn;btn.setAttribute('aria-expanded',String(open))}));try{localStorage.setItem('portfolioLanguage',lang)}catch(e){}}
-document.querySelectorAll('[data-lang]').forEach(b=>b.addEventListener('click',()=>setLanguage(b.dataset.lang)));let lang='en';try{lang=localStorage.getItem('portfolioLanguage')|| (navigator.language.toLowerCase().startsWith('ru')?'ru':'en')}catch(e){}setLanguage(content[lang]?lang:'en');document.getElementById('year').textContent=new Date().getFullYear();
-</script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Android Developer — Kotlin, Jetpack Compose, architecture and mobile integrations.">
+<title>Tulya | Android Developer</title>
+
+<style>
+:root {
+    --bg: #100f19;
+    --card: #0c0b15;
+    --text: #ffffff;
+    --muted: #9692a5;
+    --pink: #ed477e;
+    --purple: #654fff;
+    --border: #292436;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: Inter, Arial, sans-serif;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.container {
+    max-width: 1120px;
+    margin: auto;
+    padding: 0 30px;
+}
+
+/* HEADER */
+
+header {
+    border-bottom: 1px solid var(--border);
+}
+
+nav {
+    height: 76px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 23px;
+    font-weight: 800;
+}
+
+.logo span {
+    color: var(--pink);
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+.nav-links a {
+    font-size: 13px;
+    color: #ddd9e5;
+}
+
+.nav-links a:hover {
+    color: var(--pink);
+}
+
+.language-switch {
+    display: flex;
+    gap: 6px;
+    margin-left: 10px;
+}
+
+.language-switch button {
+    background: transparent;
+    color: var(--muted);
+    border: 0;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+.language-switch button.active {
+    color: var(--pink);
+}
+
+/* HERO */
+
+.hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 45px;
+    padding: 75px 0 90px;
+}
+
+.role {
+    display: inline-block;
+    padding: 7px 13px;
+    background: #24212f;
+    border-radius: 5px;
+    font-size: 13px;
+}
+
+.hero h1 {
+    font-size: clamp(34px, 4vw, 52px);
+    line-height: 1.35;
+    margin: 20px 0;
+}
+
+.gradient-text {
+    background: linear-gradient(
+        90deg,
+        var(--pink),
+        var(--purple)
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.hero p {
+    color: var(--muted);
+    font-size: 15px;
+    line-height: 1.8;
+    max-width: 460px;
+}
+
+.buttons {
+    display: flex;
+    gap: 14px;
+    margin-top: 30px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 13px 23px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background: linear-gradient(
+        110deg,
+        var(--pink),
+        var(--purple)
+    );
+}
+
+.btn-outline {
+    border: 1px solid var(--purple);
+    color: #d7caff;
+}
+
+/* HERO GRAPHIC */
+
+.hero-visual {
+    position: relative;
+    height: 370px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gradient-shape {
+    width: 320px;
+    height: 320px;
+    background: linear-gradient(
+        135deg,
+        #d94e8e,
+        #604bff
+    );
+    border-radius: 45% 55% 60% 40%;
+    transform: rotate(-15deg);
+}
+
+.phone {
+    position: absolute;
+    width: 190px;
+    height: 320px;
+    border: 11px solid #181522;
+    border-radius: 32px;
+    background: #100e20;
+    box-shadow: 0 25px 60px #0008;
+    transform: rotate(8deg);
+    padding: 28px 15px;
+    text-align: center;
+}
+
+.phone-icon {
+    font-size: 60px;
+    margin-top: 40px;
+}
+
+.phone h3 {
+    font-size: 19px;
+    margin-top: 20px;
+}
+
+.phone p {
+    font-size: 12px;
+    color: #bbb4d1;
+}
+
+.floating-badge {
+    position: absolute;
+    bottom: 20px;
+    right: 5px;
+    background: #ffffff;
+    color: #171322;
+    padding: 14px 20px;
+    border-radius: 35px;
+    font-size: 13px;
+    font-weight: 800;
+}
+
+/* SERVICES */
+
+.services {
+    padding: 15px 0 85px;
+}
+
+.section-title {
+    font-size: 27px;
+    margin-bottom: 15px;
+}
+
+.section-description {
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.8;
+    max-width: 750px;
+    margin-bottom: 65px;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 55px 20px;
+}
+
+.service-card {
+    position: relative;
+    background: var(--card);
+    border-radius: 9px;
+    min-height: 195px;
+    padding: 50px 20px 25px;
+    text-align: center;
+    transition: transform .2s;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+}
+
+.service-card.featured {
+    background: linear-gradient(
+        135deg,
+        #e44b85,
+        #6451ff
+    );
+}
+
+.service-icon {
+    position: absolute;
+    top: -36px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 76px;
+    height: 76px;
+    border-radius: 9px;
+    background: linear-gradient(
+        135deg,
+        #e44b85,
+        #6451ff
+    );
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 33px;
+}
+
+.service-card.featured .service-icon {
+    background: #ffffff;
+    color: var(--purple);
+}
+
+.service-card h3 {
+    font-size: 17px;
+    margin: 10px 0;
+}
+
+.service-card p {
+    font-size: 12px;
+    line-height: 1.7;
+    color: #a7a1b4;
+}
+
+.service-card.featured p {
+    color: #f2e8ff;
+}
+
+.learn-more {
+    margin-top: 18px;
+    background: transparent;
+    border: none;
+    color: #ffffff;
+    text-decoration: underline;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.service-details {
+    display: none;
+    margin-top: 15px;
+    font-size: 12px;
+    line-height: 1.8;
+    color: #ddd5eb;
+}
+
+.service-card.expanded .service-details {
+    display: block;
+}
+
+/* CONTACT */
+
+.contact {
+    padding: 55px 0;
+    border-top: 1px solid var(--border);
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 26px;
+}
+
+.contact p {
+    color: var(--muted);
+    font-size: 14px;
+}
+
+.contact-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+/* FOOTER */
+
+footer {
+    text-align: center;
+    padding: 25px;
+    color: var(--muted);
+    font-size: 12px;
+    border-top: 1px solid var(--border);
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 800px) {
+    .hero {
+        grid-template-columns: 1fr;
+        padding: 55px 0;
+    }
+
+    .hero-visual {
+        height: 300px;
+    }
+
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .nav-links {
+        gap: 12px;
+    }
+}
+
+@media (max-width: 550px) {
+    .container {
+        padding: 0 18px;
+    }
+
+    .nav-links a {
+        display: none;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h1 {
+        font-size: 34px;
+    }
+
+    .buttons {
+        flex-wrap: wrap;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <nav class="container">
+        <a href="#" class="logo">
+            <span>Tulya</span>Dev.
+        </a>
+
+        <div class="nav-links">
+            <a href="#home" data-i18n="navHome">Home</a>
+            <a href="#services" data-i18n="navServices">Services</a>
+            <a href="#contact" data-i18n="navContact">Contact</a>
+
+            <div class="language-switch">
+                <button id="lang-en" onclick="setLanguage('en')">EN</button>
+                <button id="lang-ru" onclick="setLanguage('ru')">RU</button>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<main>
+
+<section class="container hero" id="home">
+
+    <div>
+        <span class="role" data-i18n="role">
+            Android Developer
+        </span>
+
+        <h1>
+            <span data-i18n="heroLine1">Professional</span>
+            <br>
+            <span class="gradient-text" data-i18n="heroLine2">
+                Android Development
+            </span>
+            <br>
+            <span data-i18n="heroLine3">
+                & Technical Solutions
+            </span>
+        </h1>
+
+        <p data-i18n="heroDescription">
+            Kotlin, Jetpack Compose, Clean Architecture.
+            Development, optimization and maintenance
+            of Android applications.
+        </p>
+
+        <div class="buttons">
+            <a href="#contact" class="btn btn-primary" data-i18n="getInTouch">
+                Get in Touch →
+            </a>
+
+            <a href="https://github.com/tulya54"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="btn btn-outline">
+                GitHub ↗
+            </a>
+        </div>
+    </div>
+
+    <div class="hero-visual">
+        <div class="gradient-shape"></div>
+
+        <div class="phone">
+            <div class="phone-icon">⌘</div>
+            <h3>Kotlin</h3>
+            <p>Jetpack Compose</p>
+            <p>Android SDK</p>
+        </div>
+
+        <div class="floating-badge">
+            Android ✓
+        </div>
+    </div>
+
+</section>
+
+<section class="services" id="services">
+    <div class="container">
+
+        <h2 class="section-title" data-i18n="servicesTitle">
+            My Services
+        </h2>
+
+        <p class="section-description" data-i18n="servicesDescription">
+            Android development services for existing applications,
+            new features, architecture and technical improvements.
+        </p>
+
+        <div class="services-grid" id="services-grid"></div>
+
+    </div>
+</section>
+
+<section class="contact" id="contact">
+    <div class="container">
+
+        <h2 data-i18n="contactTitle">
+            Have an Android project?
+        </h2>
+
+        <p data-i18n="contactDescription">
+            Let's discuss your task and find the right solution.
+        </p>
+
+        <div class="contact-links">
+            <a class="btn btn-primary"
+               href="https://github.com/tulya54"
+               target="_blank"
+               rel="noopener noreferrer">
+                GitHub ↗
+            </a>
+        </div>
+
+    </div>
+</section>
+
+</main>
+
+<footer>
+    © <span id="year"></span> Tulya.
+    Android Development & Consulting.
+</footer>
+
+<script>
+const translations = {
+    en: {
+        navHome: "Home",
+        navServices: "Services",
+        navContact: "Contact",
+        role: "Android Developer",
+        heroLine1: "Professional",
+        heroLine2: "Android Development",
+        heroLine3: "& Technical Solutions",
+        heroDescription:
+            "Kotlin, Jetpack Compose, Clean Architecture. Development, optimization and maintenance of Android applications.",
+        getInTouch: "Get in Touch →",
+        servicesTitle: "My Services",
+        servicesDescription:
+            "Android development services for existing applications, new features, architecture and technical improvements.",
+        contactTitle: "Have an Android project?",
+        contactDescription:
+            "Let's discuss your task and find the right solution.",
+        learnMore: "Learn More →",
+        showLess: "Show Less ↑"
+    },
+
+    ru: {
+        navHome: "Главная",
+        navServices: "Услуги",
+        navContact: "Контакты",
+        role: "Android-разработчик",
+        heroLine1: "Профессиональная",
+        heroLine2: "Android-разработка",
+        heroLine3: "и технические решения",
+        heroDescription:
+            "Kotlin, Jetpack Compose, Clean Architecture. Разработка, оптимизация и поддержка Android-приложений.",
+        getInTouch: "Связаться →",
+        servicesTitle: "Мои услуги",
+        servicesDescription:
+            "Разработка Android-приложений, создание новых функций, улучшение архитектуры и техническая поддержка.",
+        contactTitle: "Есть задача по Android?",
+        contactDescription:
+            "Давайте обсудим задачу и подберём решение.",
+        learnMore: "Подробнее →",
+        showLess: "Свернуть ↑"
+    }
+};
+
+const services = [
+    {
+        icon: "⌘",
+        en: {
+            title: "Android Development",
+            description: "New screens and features using Kotlin and Jetpack Compose.",
+            details: "UI implementation, ViewModel, state management, navigation and integration with existing APIs."
+        },
+        ru: {
+            title: "Android-разработка",
+            description: "Разработка экранов и функций на Kotlin и Jetpack Compose.",
+            details: "Реализация UI, ViewModel, управление состояниями, навигация и интеграция с существующим API."
+        }
+    },
+    {
+        icon: "⚒",
+        en: {
+            title: "Bug Fixing",
+            description: "Fixing crashes, ANRs and complex application errors.",
+            details: "Debugging lifecycle issues, coroutine problems, navigation errors, memory leaks and application instability."
+        },
+        ru: {
+            title: "Исправление ошибок",
+            description: "Устранение крашей, ANR и сложных ошибок приложения.",
+            details: "Диагностика проблем жизненного цикла, корутин, навигации, утечек памяти и нестабильной работы."
+        }
+    },
+    {
+        icon: "⇄",
+        en: {
+            title: "API & SDK Integration",
+            description: "Integration of REST APIs and third-party Android SDKs.",
+            details: "Retrofit, OkHttp, Firebase, push notifications, CameraX and external service integrations."
+        },
+        ru: {
+            title: "Интеграция API и SDK",
+            description: "Подключение REST API и сторонних Android SDK.",
+            details: "Retrofit, OkHttp, Firebase, push-уведомления, CameraX и интеграция внешних сервисов."
+        }
+    },
+    {
+        icon: "◇",
+        en: {
+            title: "Architecture & Refactoring",
+            description: "Improving code quality and maintainability.",
+            details: "Clean Architecture, MVI, modularization, dependency injection and refactoring legacy Android code."
+        },
+        ru: {
+            title: "Архитектура и рефакторинг",
+            description: "Улучшение качества и поддерживаемости кода.",
+            details: "Clean Architecture, MVI, модульность, внедрение зависимостей и рефакторинг существующего кода."
+        }
+    },
+    {
+        icon: "⚙",
+        en: {
+            title: "Gradle & Build Setup",
+            description: "Build configuration and dependency management.",
+            details: "Product Flavors, Build Types, Gradle configuration, dependency upgrades and build troubleshooting."
+        },
+        ru: {
+            title: "Gradle и сборка проекта",
+            description: "Настройка сборок и управление зависимостями.",
+            details: "Product Flavors, Build Types, конфигурация Gradle, обновление зависимостей и исправление ошибок сборки."
+        }
+    },
+    {
+        icon: "▣",
+        en: {
+            title: "Android Security",
+            description: "Security integrations and technical reviews.",
+            details: "Android Keystore, biometrics, FLAG_SECURE, Play Integrity and security-related Android integrations."
+        },
+        ru: {
+            title: "Безопасность Android",
+            description: "Интеграция механизмов безопасности и технический аудит.",
+            details: "Android Keystore, биометрия, FLAG_SECURE, Play Integrity и интеграция защитных механизмов Android."
+        }
+    }
+];
+
+let currentLanguage = "en";
+
+function renderServices() {
+    const grid = document.getElementById("services-grid");
+    const t = translations[currentLanguage];
+
+    grid.innerHTML = "";
+
+    services.forEach((service, index) => {
+        const content = service[currentLanguage];
+
+        const card = document.createElement("article");
+        card.className = "service-card";
+
+        if (index === 0) {
+            card.classList.add("featured");
+        }
+
+        const icon = document.createElement("div");
+        icon.className = "service-icon";
+        icon.textContent = service.icon;
+
+        const title = document.createElement("h3");
+        title.textContent = content.title;
+
+        const description = document.createElement("p");
+        description.textContent = content.description;
+
+        const details = document.createElement("div");
+        details.className = "service-details";
+        details.textContent = content.details;
+
+        const button = document.createElement("button");
+        button.className = "learn-more";
+        button.textContent = t.learnMore;
+        button.setAttribute("aria-expanded", "false");
+
+        button.addEventListener("click", () => {
+            const expanded = card.classList.toggle("expanded");
+            button.textContent = expanded ? t.showLess : t.learnMore;
+            button.setAttribute("aria-expanded", String(expanded));
+        });
+
+        card.append(icon, title, description, button, details);
+        grid.appendChild(card);
+    });
+}
+
+function setLanguage(lang) {
+    if (!translations[lang]) return;
+
+    currentLanguage = lang;
+    document.documentElement.lang = lang;
+
+    localStorage.setItem("portfolioLanguage", lang);
+
+    document.querySelectorAll("[data-i18n]").forEach(element => {
+        const key = element.dataset.i18n;
+        if (translations[lang][key]) {
+            element.textContent = translations[lang][key];
+        }
+    });
+
+    document.querySelectorAll(".language-switch button").forEach(button => {
+        button.classList.remove("active");
+    });
+
+    document.getElementById("lang-" + lang).classList.add("active");
+
+    renderServices();
+}
+
+document.getElementById("year").textContent = new Date().getFullYear();
+
+setLanguage(localStorage.getItem("portfolioLanguage") || "en");
+</script>
+
+</body>
+</html>
