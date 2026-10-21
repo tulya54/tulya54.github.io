@@ -588,86 +588,163 @@ const translations = {
     }
 };
 
+
 const services = [
     {
-        icon: "⌘",
+        icon: "🏗️",
         en: {
-            title: "Android Development",
-            description: "New screens and features using Kotlin and Jetpack Compose.",
-            details: "UI implementation, ViewModel, state management, navigation and integration with existing APIs."
+            title: "Android Project Setup",
+            description:
+                "Setting up a new Android project with modern architecture and development infrastructure.",
+            details:
+                "Clean Architecture, MVI/MVVM, dependency injection (Koin/Hilt), modularization, Coroutines, Flow, navigation, Gradle configuration, build variants, product flavors, environment configuration and basic testing infrastructure."
         },
         ru: {
-            title: "Android-разработка",
-            description: "Разработка экранов и функций на Kotlin и Jetpack Compose.",
-            details: "Реализация UI, ViewModel, управление состояниями, навигация и интеграция с существующим API."
+            title: "Создание основы Android-проекта",
+            description:
+                "Подготовка Android-проекта с современной архитектурой и инфраструктурой разработки.",
+            details:
+                "Clean Architecture, MVI/MVVM, внедрение зависимостей (Koin/Hilt), модульность, Coroutines, Flow, навигация, конфигурация Gradle, варианты сборок, Product Flavors, настройка окружений и базовой инфраструктуры тестирования."
         }
     },
     {
-        icon: "⚒",
+        icon: "⚙️",
         en: {
-            title: "Bug Fixing",
-            description: "Fixing crashes, ANRs and complex application errors.",
-            details: "Debugging lifecycle issues, coroutine problems, navigation errors, memory leaks and application instability."
+            title: "Gradle & Build Configuration",
+            description:
+                "Configuring Gradle, build variants and Google/Huawei service support.",
+            details:
+                "Gradle Kotlin DSL, Product Flavors, Build Types, Google Mobile Services (GMS), Huawei Mobile Services (HMS), environment-specific configurations (DEV/QA/STAGING/PROD), dependency management, signing configurations and build troubleshooting."
+        },
+        ru: {
+            title: "Настройка Gradle и сборок",
+            description:
+                "Настройка Gradle, вариантов сборки и поддержки сервисов Google/Huawei.",
+            details:
+                "Gradle Kotlin DSL, Product Flavors, Build Types, Google Mobile Services (GMS), Huawei Mobile Services (HMS), конфигурации окружений (DEV/QA/STAGING/PROD), управление зависимостями, настройка подписания и устранение ошибок сборки."
+        }
+    },
+    {
+        icon: "🛡️",
+        en: {
+            title: "Android Application Security",
+            description:
+                "Integration of security mechanisms to protect applications, user data and sensitive operations.",
+            details:
+                "Detection and mitigation of remote-access risks (AnyDesk and similar tools), screen recording and screenshot restrictions, active-call detection, application integrity checks (Play Integrity), root and tampering detection, Android Keystore, encrypted local storage and biometric authentication. Protection capabilities depend on Android version and device restrictions."
+        },
+        ru: {
+            title: "Безопасность Android-приложений",
+            description:
+                "Внедрение механизмов защиты приложения, пользовательских данных и критичных операций.",
+            details:
+                "Обнаружение и снижение рисков удалённого доступа (AnyDesk и аналогичные инструменты), ограничение записи экрана и скриншотов, обнаружение активных звонков, проверка целостности приложения (Play Integrity), обнаружение Root и модификаций приложения, Android Keystore, шифрование локальных данных и биометрическая аутентификация. Возможности защиты зависят от версии Android и ограничений устройства."
+        }
+    },
+    {
+        icon: "📱",
+        en: {
+            title: "Jetpack Compose & Android UI",
+            description:
+                "Developing Android screens from Figma designs and migrating XML layouts to Jetpack Compose.",
+            details:
+                "Implementation of new screens using Jetpack Compose or XML, Material Design, reusable UI components, animations, adaptive layouts, UI state management, navigation and gradual migration from XML to Compose."
+        },
+        ru: {
+            title: "Jetpack Compose и Android UI",
+            description:
+                "Разработка экранов по макетам Figma и перенос XML-интерфейсов на Jetpack Compose.",
+            details:
+                "Разработка экранов на Jetpack Compose или XML, Material Design, переиспользуемые UI-компоненты, анимации, адаптивные интерфейсы, управление состояниями UI, навигация и постепенная миграция с XML на Compose."
+        }
+    },
+    {
+        icon: "🐞",
+        en: {
+            title: "Bug Fixing & Debugging",
+            description:
+                "Diagnosing and fixing crashes, ANRs, memory leaks and complex Android application issues.",
+            details:
+                "Crash and ANR investigation, memory leak detection, lifecycle and navigation issues, coroutine and Flow problems, concurrency errors, application stability improvements and debugging with Android Studio tools."
         },
         ru: {
             title: "Исправление ошибок",
-            description: "Устранение крашей, ANR и сложных ошибок приложения.",
-            details: "Диагностика проблем жизненного цикла, корутин, навигации, утечек памяти и нестабильной работы."
+            description:
+                "Диагностика и устранение крашей, ANR, утечек памяти и сложных ошибок Android-приложений.",
+            details:
+                "Анализ Crash и ANR, поиск утечек памяти, исправление проблем жизненного цикла и навигации, ошибок Coroutines и Flow, проблем многопоточности, повышение стабильности приложения и диагностика средствами Android Studio."
         }
     },
     {
-        icon: "⇄",
+        icon: "🔌",
         en: {
-            title: "API & SDK Integration",
-            description: "Integration of REST APIs and third-party Android SDKs.",
-            details: "Retrofit, OkHttp, Firebase, push notifications, CameraX and external service integrations."
+            title: "SDK Integration & Configuration",
+            description:
+                "Integration and configuration of third-party SDKs and Android platform services.",
+            details:
+                "Firebase, Google/Huawei services, analytics, crash reporting (Sentry/Crashlytics), push notifications, CameraX, ML Kit, biometric SDKs, WebView integrations and other third-party libraries."
         },
         ru: {
-            title: "Интеграция API и SDK",
-            description: "Подключение REST API и сторонних Android SDK.",
-            details: "Retrofit, OkHttp, Firebase, push-уведомления, CameraX и интеграция внешних сервисов."
+            title: "Подключение и настройка SDK",
+            description:
+                "Интеграция сторонних SDK, библиотек и платформенных сервисов Android.",
+            details:
+                "Firebase, сервисы Google/Huawei, аналитика, мониторинг ошибок (Sentry/Crashlytics), Push-уведомления, CameraX, ML Kit, биометрические SDK, интеграция WebView и других сторонних библиотек."
         }
     },
     {
-        icon: "◇",
+        icon: "♻️",
         en: {
-            title: "Architecture & Refactoring",
-            description: "Improving code quality and maintainability.",
-            details: "Clean Architecture, MVI, modularization, dependency injection and refactoring legacy Android code."
+            title: "Android Code Refactoring",
+            description:
+                "Improving code quality, architecture and maintainability of existing Android projects.",
+            details:
+                "Refactoring legacy Kotlin/Java code, restructuring application layers, extracting modules, improving MVI/MVVM implementations, simplifying ViewModels, dependency management, reducing technical debt and improving testability."
         },
         ru: {
-            title: "Архитектура и рефакторинг",
-            description: "Улучшение качества и поддерживаемости кода.",
-            details: "Clean Architecture, MVI, модульность, внедрение зависимостей и рефакторинг существующего кода."
+            title: "Рефакторинг Android-кода",
+            description:
+                "Улучшение архитектуры, качества и поддерживаемости существующего Android-кода.",
+            details:
+                "Рефакторинг Kotlin/Java-кода, разделение слоёв приложения, выделение модулей, улучшение MVI/MVVM, упрощение ViewModel, управление зависимостями, устранение технического долга и повышение тестируемости."
         }
     },
     {
-        icon: "⚙",
+        icon: "🚀",
         en: {
-            title: "Gradle & Build Setup",
-            description: "Build configuration and dependency management.",
-            details: "Product Flavors, Build Types, Gradle configuration, dependency upgrades and build troubleshooting."
+            title: "Android App Publishing",
+            description:
+                "Preparing Android applications for release and publishing to Google Play.",
+            details:
+                "Release build configuration, Android App Bundle (AAB), application signing, versioning, Google Play Console configuration, internal/closed testing tracks and assistance with release submission."
         },
         ru: {
-            title: "Gradle и сборка проекта",
-            description: "Настройка сборок и управление зависимостями.",
-            details: "Product Flavors, Build Types, конфигурация Gradle, обновление зависимостей и исправление ошибок сборки."
+            title: "Публикация Android-приложений",
+            description:
+                "Подготовка Android-приложений к релизу и публикации в Google Play.",
+            details:
+                "Настройка Release-сборок, Android App Bundle (AAB), подпись приложения, версионирование, настройка Google Play Console, внутреннее и закрытое тестирование, сопровождение отправки релиза."
         }
     },
     {
-        icon: "▣",
+        icon: "🔍",
         en: {
-            title: "Android Security",
-            description: "Security integrations and technical reviews.",
-            details: "Android Keystore, biometrics, FLAG_SECURE, Play Integrity and security-related Android integrations."
+            title: "Android Project Audit",
+            description:
+                "Technical assessment of Android project architecture, dependencies, performance and maintainability.",
+            details:
+                "Review of project structure, Clean Architecture implementation, MVI/MVVM patterns, Gradle dependencies, application performance, lifecycle handling, memory management, security configurations and technical debt. Delivery of findings and prioritized recommendations."
         },
         ru: {
-            title: "Безопасность Android",
-            description: "Интеграция механизмов безопасности и технический аудит.",
-            details: "Android Keystore, биометрия, FLAG_SECURE, Play Integrity и интеграция защитных механизмов Android."
+            title: "Аудит Android-проекта",
+            description:
+                "Технический анализ архитектуры, зависимостей, производительности и качества Android-проекта.",
+            details:
+                "Анализ структуры проекта, реализации Clean Architecture, MVI/MVVM, Gradle-зависимостей, производительности, жизненного цикла, управления памятью, конфигураций безопасности и технического долга. Подготовка отчёта с выявленными проблемами и приоритетными рекомендациями."
         }
     }
 ];
+
 
 let currentLanguage = "en";
 
