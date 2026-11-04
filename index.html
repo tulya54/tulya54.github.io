@@ -4,47 +4,127 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
+          content="width=device-width, initial-scale=1">
 
-    <title>Tulya | Android Developer</title>
+    <title>Tulya Dev | Android Developer</title>
 
     <link rel="stylesheet" href="css/style.css">
+
+    <script src="js/translations.js" defer></script>
+    <script src="js/services.js" defer></script>
+    <script src="js/main.js" defer></script>
 </head>
 
 <body>
+    <header class="site-header">
+        <nav class="container nav">
+            <a class="logo" href="#home">
+                <span>Tulya</span>Dev.
+            </a>
 
-    <header>
-        <!-- Логотип, меню, EN / RU -->
+            <div class="nav-right">
+                <div class="nav-links">
+                    <a href="#home" data-i18n="navHome">Home</a>
+                    <a href="#services" data-i18n="navServices">Services</a>
+                    <a href="#contact" data-i18n="navContact">Contact</a>
+                </div>
+
+                <div class="language-switch">
+                    <button data-lang="en">EN</button>
+                    <span>/</span>
+                    <button data-lang="ru">RU</button>
+                </div>
+            </div>
+        </nav>
     </header>
 
     <main>
-        <section id="home">
-            <!-- Главный экран -->
-        </section>
+        <section class="container hero" id="home">
+            <div class="hero-copy">
+                <span class="role" data-i18n="role">
+                    Android Developer
+                </span>
 
-        <section id="services">
-            <h2 data-i18n="servicesTitle">
-                My Services
-            </h2>
+                <h1>
+                    <span data-i18n="heroLine1">Professional</span>
+                    <span class="gradient-text"
+                          data-i18n="heroLine2">
+                        Android Development
+                    </span>
+                    <span data-i18n="heroLine3">
+                        & Technical Solutions
+                    </span>
+                </h1>
 
-            <div
-                class="services-grid"
-                id="services-grid">
+                <p data-i18n="heroDescription">
+                    Kotlin, Jetpack Compose, Clean Architecture.
+                </p>
+
+                <div class="actions">
+                    <a class="button primary"
+                       href="#contact"
+                       data-i18n="getInTouch">
+                        Get in touch
+                    </a>
+
+                    <a class="button outline"
+                       href="https://github.com/tulya54">
+                        GitHub
+                    </a>
+                </div>
+            </div>
+
+            <div class="hero-art" aria-hidden="true">
+                <div class="gradient-shape"></div>
+
+                <div class="phone">
+                    <div class="phone-symbol">⌘</div>
+                    <strong>Kotlin</strong>
+                    <small>Jetpack Compose</small>
+                    <small>Android SDK</small>
+                </div>
+
+                <div class="floating-badge">Android ✓</div>
             </div>
         </section>
 
-        <section id="contact">
-            <!-- Контакты -->
+        <section class="services-section" id="services">
+            <div class="container">
+                <div class="section-heading">
+                    <h2 data-i18n="servicesTitle">
+                        My Services
+                    </h2>
+                    <p data-i18n="servicesDescription">
+                        Android development services.
+                    </p>
+                </div>
+
+                <div class="services-grid"
+                     id="services-grid"></div>
+            </div>
+        </section>
+
+        <section class="contact-section" id="contact">
+            <div class="container contact-content">
+                <h2 data-i18n="contactTitle">
+                    Have an Android task?
+                </h2>
+
+                <p data-i18n="contactDescription">
+                    Let's discuss your project.
+                </p>
+
+                <a class="button primary"
+                   href="https://github.com/tulya54"
+                   data-i18n="contactButton">
+                    View my GitHub
+                </a>
+            </div>
         </section>
     </main>
 
-    <footer>
-        <!-- Copyright -->
+    <footer class="site-footer">
+        © <span id="year"></span> Tulya Dev
     </footer>
-
-    <script src="js/translations.js"></script>
-    <script src="js/services.js"></script>
-    <script src="js/main.js"></script>
-
 </body>
 </html>
